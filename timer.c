@@ -33,7 +33,6 @@ time_handler(GtkWidget *widget)
   curtime = time(NULL);
   loctime = localtime(&curtime);
   strftime(buffer, 256, "%T", loctime);
-
   gtk_widget_queue_draw(widget);
   return TRUE;
 }
