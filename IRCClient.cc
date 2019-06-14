@@ -349,11 +349,6 @@ static gboolean get_update(GtkWidget *widget) {
     return TRUE;
 }
 
-void update_timely() 
-{
-    g_timeout_add(1000, (GSourceFunc) get_update, (gpointer) window);
-}
-
 void create_new_room() 
 {
     newRoom = gtk_entry_get_text(GTK_ENTRY(entryCreateRoom));
@@ -361,6 +356,10 @@ void create_new_room()
 "NULL", response);
 }
 
+void update_timely() 
+{
+    g_timeout_add(1000, (GSourceFunc) get_update, (gpointer) window);
+}
 void create_room() {
     GtkWidget *window_create_room;
     window_create_room = gtk_window_new (GTK_WINDOW_TOPLEVEL);
