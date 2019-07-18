@@ -104,7 +104,6 @@ time_handler(GtkWidget *widget)
   if (widget->window == NULL) return FALSE;
 
   //gtk_widget_queue_draw(widget);
-
   fprintf(stderr, "Hi\n");
   update_list_rooms();
 
