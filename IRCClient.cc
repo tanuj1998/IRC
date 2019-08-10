@@ -36,8 +36,9 @@ GtkWidget * labelRoomNameEntered;
 
 static char buffer[256];
 
-char * response = (char *)malloc(100 * sizeof(char));
+
 char * newMessage = (char *)malloc(200 * sizeof(char));
+char * response = (char *)malloc(100 * sizeof(char));
 const char * newRoom = (char *)malloc(100 * sizeof(char));
 const char * newUser = (char *)malloc(100 * sizeof(char));
 const char * newPassword = (char *)malloc(100 * sizeof(char));
@@ -113,6 +114,7 @@ response)
 
         int n = 0;
         int len = 0;
+	
         while ((n=read(sock, response+len, (1024*10) - len))>0) {
                 len += n;
         }
